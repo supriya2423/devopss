@@ -1,0 +1,11 @@
+---
+- name: handler playbook
+  hosts: db
+  become: true
+  vars:
+    - name: supriya
+  taks:
+    - name: install httpd
+      yum:
+        name: "{{ name }}"
+        state: latest
